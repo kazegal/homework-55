@@ -59,7 +59,6 @@ const App = () => {
         }
     };
 
-
     const removeOne = (name: string) => {
         setIngredients(prevState => {
             return prevState.map(item => {
@@ -86,10 +85,6 @@ const App = () => {
         });
     };
 
-
-
-
-
     const removeAll = (name: string) => {
         console.log("removeAll called for", name);
         setIngredients((prevState) => {
@@ -103,7 +98,6 @@ const App = () => {
             return prevState.map(item => ({ ...item, count: 0 }));
         });
     };
-
 
     const resetAll = () => {
         setIngredients((prevState) => {
@@ -125,7 +119,6 @@ const App = () => {
         });
     };
 
-
     const showIngredients = INGREDIENTS.map((ingredient, index) => {
         return (
             <IngredientPart name={ingredient.name}
@@ -139,7 +132,6 @@ const App = () => {
             />
         )
     });
-
 
     return (
         <div className="App">
